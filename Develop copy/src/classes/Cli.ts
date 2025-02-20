@@ -390,28 +390,32 @@ class Cli {
           }
         }
         // TODO: add statements to perform the tow action only if the selected vehicle is a truck. Call the findVehicleToTow method to find a vehicle to tow and pass the selected truck as an argument. After calling the findVehicleToTow method, you will need to return to avoid instantly calling the performActions method again since findVehicleToTow is asynchronous.
-          else if (answers.action === 'Tow Vehicle') {
+          else if (answers.action === 'Tow a vehicle') {
             for(let i = 0; i < this.vehicles.length; i++) {
               if (this.vehicles[i].vin === this.selectedVehicleVin) {
                 if (this.vehicles[i] instanceof Truck) {
                   this.findVehicleToTow(this.vehicles[i] as Truck);
+                  return;
                 } else {
                   console.log('You must use a truck to tow.');
                   this.performActions()
-                }
+                } 
               }
             }
           }
 
         // TODO: add statements to perform the wheelie action only if the selected vehicle is a motorbike
-          else if (answers.action === 'Wheelie') {
+          else if (answers.action === 'Do a Wheelie') {
             for(let i = 0; i < this.vehicles.length; i++) {
               if( this.vehicles[i].vin === this.selectedVehicleVin) {
                 if(this.vehicles[i] instanceof Motorbike) {
                  (this.vehicles[i] as Motorbike).wheelie();
+                 return;
                 } else {
                   console.log('Only motorbikes can do a wheelie.')
+                  this.performActions();
                 }
+                
               }
             }
           }

@@ -410,12 +410,9 @@ class Cli {
               if( this.vehicles[i].vin === this.selectedVehicleVin) {
                 if(this.vehicles[i] instanceof Motorbike) {
                  (this.vehicles[i] as Motorbike).wheelie();
-                 return;
                 } else {
-                  console.log('Only motorbikes can do a wheelie.')
-                  this.performActions();
-                }
-                
+                  console.log('Only motorbikes can do a wheelie.');
+                }  
               }
             }
           }

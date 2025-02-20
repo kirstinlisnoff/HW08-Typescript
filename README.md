@@ -16,6 +16,9 @@ The application can be used as an interactive playground for users to explore th
 
 ## Walkthrough Video
 
+https://github.com/user-attachments/assets/8a7334aa-7ad3-459c-914e-8eedd331fcf8
+
+
 ## Contributors
 Kirstin Lisnoff
 
